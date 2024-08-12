@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>initial-scale=1.0">
+    <title>Menu Card</title>
+    <style>
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: aliceblue;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            margin: 0;
+        }
+        .menu-card{
+            background-color: #fff;
+            border-radius:8px;
+            box-shadow: 0 4px 8px rbga(0, 0, 0.1);
+            overflow: hidden;
+            max-width: 400px;
+            width: 100%;
+        }
+        .menu-card header{
+            background-color: #ff6347;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .menu-card .menu-section{
+            padding: 20px;
+        }
+        .menu-card h2{
+            margin: 0 0 10px;
+        }
+        .menu-card ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu-card ul li{
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .menu-card ul li:last-child{
+            border-bottom: none;
+        }
+        .menu-card .price{
+            float:right;
+            color:#888;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-card">
+        <header>
+            <h1>Resturent Menu</h1>
+        </header>
+        <div class="menu-section">
+            <h2>MAIN COURSE</h2>
+            <ul>
+                <li>Chesseburger <span class="price">$34</span></li>
+                <li>Cheese sandwich <span class="price">$22</span></li>
+                <li>Hot dog <span class="price">$24</span></li>
+            </ul>
+        </div>
+        <div class="menu-section">
+            <h2>APPETIZERS</h2>
+            <ul>
+                <li>Fruit Salad <span class="price">$13</span></li>
+                <li>Cocktails <span class="price">$12</span></li>
+                <li>French Fries <span class="price">$15</span></li>
+            </ul>
+        </div>
+        <div class="menu-section">
+            <h2>BEVERAGES</h2>
+            <ul>
+                <li>Milk Shake <span class="price">$3</span></li>
+                <li>Lemon Tea <span class="price">$2</span></li>
+                <li>Coffee<span class="price">$5</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.movie-library {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+img{
+    height: max-content;
+}
+
+.movie h2 {
+    font-size: 18px;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.movie p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Movie Library</h1>
+    </header>
+    
+    <div class="movie-library">
+        <div class="movie">
+            <img src="Saaho.jpeg" alt="Movie 1">
+            <h2>Movie Title 1</h2>
+            <p>Genre: Action</p>
+            <p>Year: 2022</p>
+        </div>
+        <div class="movie">
+            <img src="Adipurush.jpeg" alt="Movie 2">
+            <h2>Movie Title 2</h2>
+            <p>Genre: Drama</p>
+            <p>Year: 2021</p>
+        </div>
+        <div class="movie">
+            <img src="images.jpeg" alt="Movie 3">
+            <h2>Movie Title 3</h2>
+            <p>Genre: Comedy</p>
+            <p>Year: 2023</p>
+        </div>
+    </div>
+</body>
+</html>
