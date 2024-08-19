@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Person - Virat Kohli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+        .container {
+            text-align: center;
+        }
+        .person-info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>My Favorite Person</h1>
+    <button id="show-info-btn">Show Information about Virat Kohli</button>
+
+    <div class="person-info" id="person-info">
+        <h2>Virat Kohli</h2>
+        <p><strong>Born:</strong> <span data-birthdate="1988-11-05"></span></p>
+        <p><strong>Nationality:</strong> <span data-nationality="Indian"></span></p>
+        <p><strong>Profession:</strong> <span data-profession="Cricketer"></span></p>
+        <p><strong>Known for:</strong> <span data-knownfor="Being one of the greatest batsmen of all time"></span></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('show-info-btn').addEventListener('click', function() {
+        var personInfo = document.getElementById('person-info');
+        var birthdate = document.querySelector('[data-birthdate]');
+        var nationality = document.querySelector('[data-nationality]');
+        var profession = document.querySelector('[data-profession]');
+        var knownFor = document.querySelector('[data-knownfor]');
+
+        birthdate.textContent = birthdate.getAttribute('data-birthdate');
+        nationality.textContent = nationality.getAttribute('data-nationality');
+        profession.textContent = profession.getAttribute('data-profession');
+        knownFor.textContent = knownFor.getAttribute('data-knownfor');
+
+        personInfo.style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
