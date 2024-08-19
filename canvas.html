@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Object Creation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        .controls select, .controls button {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        canvas {
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Create Objects on Canvas</h2>
+    <div class="controls">
+        <select id="shapeSelector">
+            <option value="rectangle">Rectangle</option>
+            <option value="circle">Circle</option>
+            <option value="line">Line</option>
+        </select>
+        <button onclick="clearCanvas()">Clear Canvas</button>
+    </div>
+    <canvas id="drawingCanvas" width="800" height="600"></canvas>
+
+    <script>
+        const canvas = document.getElementById('drawingCanvas');
+        const context = canvas.getContext('2d');
+        const shapeSelector = document.getElementById('shapeSelector');
+        let isDrawing = false;
+        let startX, startY;
+
+        // Start drawing when the mouse is pressed down
+        canvas.addEventListener('mousedown', (e) => {
+            startX = e.offsetX;
+            startY = e.offsetY;
+            isDrawing = true;
+        });
+
+        // Draw the selected shape on mouse up
+        canvas.addEventListener('mouseup', (e) => {
+            if (isDrawing) {
+                const shape = shapeSelector.value;
+                const endX = e.offsetX;
+                const endY = e.offsetY;
+
+                context.beginPath();
+                switch (shape) {
+                    case 'rectangle':
+                        const width = endX - startX;
+                        const height = endY - startY;
+                        context.rect(startX, startY, width, height);
+                        break;
+                    case 'circle':
+                        const radius = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
+                        context.arc(startX, startY, radius, 0, 2 * Math.PI);
+                        break;
+                    case 'line':
+                        context.moveTo(startX, startY);
+                        context.lineTo(endX, endY);
+                        break;
+                }
+                context.strokeStyle = '#333';
+                context.lineWidth = 2;
+                context.stroke();
+                isDrawing = false;
+            }
+        });
+
+        // Function to clear the canvas
+        function clearCanvas() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+
+</body>
+</html>
