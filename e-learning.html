@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section#home {
+    background-color: #fff;
+}
+
+section#courses {
+    background-color: #e2e2e2;
+}
+
+.course-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 300px;
+    text-align: left;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the E-Learning Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Learn from the best online courses</h2>
+        <p>Join thousands of learners across the world and gain new skills with our curated courses.</p>
+        <button>Get Started</button>
+    </section>
+
+    <section id="courses">
+        <h2>Our Popular Courses</h2>
+        <div class="course-card">
+            <h3>Web Development</h3>
+            <p>Master the art of web development with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="course-card">
+            <h3>Data Science</h3>
+            <p>Dive into data analysis, machine learning, and data visualization.</p>
+        </div>
+        <div class="course-card">
+            <h3>Graphic Design</h3>
+            <p>Learn the principles of design and enhance your creative skills.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing high-quality online education to help you achieve your career goals.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 E-Learning Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>
